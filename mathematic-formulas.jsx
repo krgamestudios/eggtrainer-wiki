@@ -10,7 +10,9 @@ const MathematicFormulas = props => {
 			<h2 className='text left'>Battle Damage Formula</h2>
 			<hr />
 			<br />
-			<p className='text'><strong>d = p * ((a + 4) / (d + 4)) * S * T * C * r</strong></p>
+			<blockquote>
+				<p className='text'><strong>d = p * ((a + 4) / (d + 4)) * S * T * C * r</strong></p>
+			</blockquote>
 
 			<p className='text'>
 				<strong>d</strong>: damage<br />
@@ -37,8 +39,10 @@ const MathematicFormulas = props => {
 			<h2 className='text left'>Elo Rating System</h2>
 			<hr />
 			<br />
-			<p className='text'><strong>A = 1 / (1 + 10 ^ ((b - a) / 400))</strong></p>
-			<p className='text'><strong>a2 = (W * A) * K</strong></p>
+			<blockquote>
+				<p className='text'><strong>A = 1 / (1 + 10 ^ ((b - a) / 400))</strong></p>
+				<p className='text'><strong>a2 = (W * A) * K</strong></p>
+			</blockquote>
 
 			<p className='text'>
 				<strong>W</strong>: win(1) | loss(0)<br />
