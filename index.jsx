@@ -10,17 +10,33 @@ const Index = props => {
 			<p className='text'>Here you can find all of the user-contributed information about the game Egg Trainer.</p>
 			<p className='text'>To contribute to this wiki, open a new pull request on the public github repository here by <a href='https://github.com/krgamestudios/eggtrainer-wiki'>following this link.</a></p>
 
-			<h2 className='text'>Beginner's Guide</h2>
+			<h2 className='text left'>Beginner's Guide</h2>
 			<hr />
-			<p className='text'>Coming Soon</p>
+			<br />
+			<ul>
+				<li><Link className='text' to='/wiki/new-player-guide'>New Player Guide</Link></li>
+				<li className='text'>Training for Battle (Coming Soon...)</li>
+				<li className='text'>Your First Battle (Coming Soon...)</li>
+			</ul>
 			<br />
 
-			<h2 className='text'>Important Game Stats</h2>
+			<h2 className='text left'>Important Game Stats</h2>
 			<hr />
+			<br />
 			<ul>
-				<li><Link to='/wiki/elements'  className='text'>Elements Graph</Link></li>
+				<li><Link className='text' to='/wiki/elements'>Elements Graph</Link></li>
+				<li className='text'>Technique statistics (Coming Soon...)</li>
+				<li><Link className='text' to='/wiki/mathematic-formulas'>Mathematic Formulas</Link></li>
 			</ul>
-			<p className='text'>Coming Soon</p>
+			<br />
+
+			<h2 className='text left'>Easter Eggs</h2>
+			<hr />
+			<br />
+			<p className='text'>WARNING: spoilers ahead!</p>
+			<ul>
+				<li><Link className='text' to='/wiki/fantastic-creatures'>Fantastic Creatures And Where To Find Them</Link></li>
+			</ul>
 			<br />
 		</>
 	);
