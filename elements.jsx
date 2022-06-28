@@ -33,21 +33,21 @@ const Elements = props => {
 			<p className='text'>On this page, you can see the elemental matchup chart. Attackers down the side, defenders across the top. The numbers on the chart are multipliers.</p>
 			<br />
 			<div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-				<div className='table noCollapse' style={{ maxWidth: 600, maxHeight: 600, border: '1px solid black' }}>
+				<div className='table noCollapse' style={{ maxWidth: 50*11, border: '1px solid lightgrey', borderRadius: '3px' }}>
 					{unshift(Object.keys(elements)).map((offenseKey, offenseIndex) => {
 						return (
 							<div className='row' key={offenseIndex}>
 								{unshift(elements[offenseKey] ? Object.keys(elements[offenseKey]) : topRow).map((defenceKey, defenceIndex) => {
 									//render each "cell" of the table, taking care on the edges too
 									if (offenseIndex == 0 && defenceIndex == 0) {
-										return <div className='col' key={defenceIndex} />
+										return <div className='col' key={defenceIndex} style={{maxWidth: '50px'}} />
 									}
 
 									//top row
 									if (offenseIndex == 0) {
 										return (
-											<div className='col centered middle' key={defenceIndex}>
-												<img alt={defenceKey} src={`/img/icons/100/${defenceKey}-100.png`} style={{maxWidth: '50px'}} />
+											<div className='col centered middle' key={defenceIndex} style={{maxWidth: '50px'}}>
+												<img alt={defenceKey} src={`/img/icons/100/${defenceKey}-100.png`} />
 											</div>
 										);
 									}
@@ -55,14 +55,15 @@ const Elements = props => {
 									//down the side
 									if (defenceIndex == 0) {
 										return (
-											<div className='col centered middle' key={defenceIndex}>
-												<img alt={offenseKey} src={`/img/icons/100/${offenseKey}-100.png`} style={{maxWidth: '50px'}} />
+											<div className='col centered middle' key={defenceIndex} style={{maxWidth: '50px'}}>
+												<img alt={offenseKey} src={`/img/icons/100/${offenseKey}-100.png`} />
 											</div>
 										);
 									}
 
 									//print out the multiplier
 									const style = {
+										maxWidth: '50px',
 										paddingTop: '0.5em',
 										backgroundColor: elements[offenseKey][defenceKey] > 1 ? 'green' : elements[offenseKey][defenceKey] < 1 ? 'red' : '',
 										color: elements[offenseKey][defenceKey] == 1 ? 'black' : 'white',
@@ -70,7 +71,7 @@ const Elements = props => {
 
 									return (
 										<div className='col centered middle' style={style} key={defenceIndex}>
-											<p className='text'>{elements[offenseKey][defenceKey] == 1 ? '-' : elements[offenseKey][defenceKey]}</p>
+											<p className='text' style={{top: '50%', bottom: '0', margin: '10px'}}>{elements[offenseKey][defenceKey] == 1 ? '-' : elements[offenseKey][defenceKey]}</p>
 										</div>
 									);
 								})}
