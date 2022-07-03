@@ -41,7 +41,7 @@ const MathematicFormulas = props => {
 			<br />
 			<blockquote>
 				<p className='text'><strong>A = 1 / (1 + 10 ^ ((b - a) / 400))</strong></p>
-				<p className='text'><strong>a2 = (W * A) * K</strong></p>
+				<p className='text'><strong>a2 = a + (W - A) * K</strong></p>
 			</blockquote>
 
 			<p className='text'>
