@@ -11,11 +11,11 @@ const MathematicFormulas = props => {
 			<hr />
 			<br />
 			<blockquote>
-				<p className='text'><strong>d = p * ((a + 4) / (d + 4)) * S * T * C * r</strong></p>
+				<p className='text'><strong>D = p * ((a + 4) / (d + 4)) * S * T * C * r</strong></p>
 			</blockquote>
 
 			<p className='text'>
-				<strong>d</strong>: damage<br />
+				<strong>D</strong>: damage<br />
 				<strong>p</strong>: technique power<br />
 				<strong>a</strong>: attack (cumulative, 0 to 96)<br />
 				<strong>d</strong>: defence (cumulative, 0 to 96)<br />
