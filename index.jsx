@@ -10,11 +10,12 @@ const Index = props => {
 			<p className='text'>Here you can find all of the user-contributed information about the game Egg Trainer.</p>
 			<p className='text'>To contribute to this wiki, open a new pull request on the public github repository here by <a href='https://github.com/krgamestudios/eggtrainer-wiki'>following this link.</a></p>
 
-			<h2 className='text left'>Beginner's Guide</h2>
+			<h2 className='text left'>New Player Guide</h2>
 			<hr />
 			<br />
 			<ul>
-				<li><Link className='text' to='/wiki/new-player-guide'>New Player Guide</Link></li>
+				<li><Link className='text' to='/wiki/introduction'>Introduction</Link></li>
+				<li><Link className='text' to='/wiki/getting-started'>Getting Started</Link></li>
 				<li className='text'>Training for Battle (Coming Soon...)</li>
 				<li className='text'>Your First Battle (Coming Soon...)</li>
 			</ul>
